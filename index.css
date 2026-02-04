@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 156 42% 10%; /* Dark green-ish black for text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 156 42% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 156 42% 10%;
+
+    --primary: 142 76% 36%; /* Default Green */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 48 96% 53%; /* Default Yellow */
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 156 20% 96%;
+    --muted-foreground: 156 10% 40%;
+
+    --accent: 156 20% 96%;
+    --accent-foreground: 142 76% 36%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 156 20% 90%;
+    --input: 156 20% 90%;
+    --ring: 142 76% 36%;
+
+    --radius: 0.75rem;
+
+    --font-cairo: 'Cairo', sans-serif;
+  }
+
+  .dark {
+    --background: 156 42% 5%;
+    --foreground: 156 10% 98%;
+
+    --card: 156 42% 5%;
+    --card-foreground: 156 10% 98%;
+
+    --popover: 156 42% 5%;
+    --popover-foreground: 156 10% 98%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 48 96% 53%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 156 20% 15%;
+    --muted-foreground: 156 10% 60%;
+
+    --accent: 156 20% 15%;
+    --accent-foreground: 156 10% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 156 20% 15%;
+    --input: 156 20% 15%;
+    --ring: 142 76% 36%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    direction: rtl;
+  }
+  body {
+    @apply bg-background text-foreground font-cairo antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+/* Custom utilities for RTL spacing if needed, though Tailwind handles logical properties well */
